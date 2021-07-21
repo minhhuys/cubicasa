@@ -33,11 +33,12 @@
 
 //Content Page
 .content-page {
+  max-width: 700px;
+  margin: 0 auto;
   min-height: 80vh;
-  padding: 0 12.5px 5px 12.5px;
-  margin-top: $topbar-height;
-  margin-left: $leftbar-width;
-  overflow: hidden;
+  // padding: 0 12.5px 5px 12.5px;
+  margin-top: $header-height;
+  background: white;
 }
 
 // Sidemenu
@@ -503,8 +504,8 @@
 
   .content-page,
   .left-side-menu-condensed .content-page {
-    padding: 0 10px;
-    margin-left: 0 !important;
+    // padding: 0 10px;
+    margin: $header-height 16px;
   }
 
   .pro-user-name {

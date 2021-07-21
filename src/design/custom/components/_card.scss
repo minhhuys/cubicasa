@@ -53,3 +53,29 @@
     margin-bottom: $grid-gutter-width;
     color: $gray-600;
 }
+
+// Card Setting
+
+.card-settings {
+    .nav-pills {
+        background: $cubi-main-color;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+
+        .nav-item {
+            .nav-link {
+                color: white;
+                font-weight: 400;
+
+                &.active {
+                    color: $cubi-main-color;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    .tab-content {
+        padding: 20px;
+    }
+}

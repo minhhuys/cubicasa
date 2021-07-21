@@ -21,7 +21,7 @@
 
 .multiselect__option--highlight,
 .multiselect__option--highlight::after {
-  background: $primary !important;
+  background: $cubi-main-color !important;
 }
 
 .multiselect__placeholder {
@@ -40,7 +40,7 @@
 
 .multiselect__tag {
   margin-bottom: 0 !important;
-  background-color: $primary !important;
+  background-color: $cubi-main-color !important;
 }
 
 .multiselect__tag-icon::after {

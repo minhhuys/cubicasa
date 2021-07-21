@@ -5,20 +5,18 @@ import { layoutComputed } from '@state/helpers'
 // import Rightsidebar from '@components/right-sidebar'
 import LeftSidebar from '@components/left-sidebar'
 
-import Footer from '@components/footer'
+// import Footer from '@components/footer'
 import Header from "@components/header"
 
 export default {
 	components: {
-		Footer, 
+		// Footer, 
 		Header, 
 		LeftSidebar,
 		// Rightsidebar
 	},
 	data() {
-		return {
-			
-		}
+		return {}
 	},
 	computed: {
 		...layoutComputed,
@@ -53,12 +51,8 @@ export default {
 		<Header />
 		<div class="content-page">
 			<div class="content">
-				<!-- Start Content-->
-				<div class="container-fluid">
-					<slot />
-				</div>
+				<slot />
 			</div>
-			<Footer />
 		</div>
 		<LeftSidebar />
 	</div>

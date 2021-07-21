@@ -118,6 +118,8 @@ export default {
     handleSubmit(e) {
       this.submitted = true
 
+            console.log('this.$v', this.$v)
+
       // stop here if form is invalid
       this.$v.$touch()
     },

@@ -109,6 +109,11 @@
   }
 }
 
+.custom-control-input:checked ~ .custom-control-label::before {
+    border-color: $cubi-main-color;
+    background-color: $cubi-main-color;
+}
+
 @each $color, $value in $theme-colors {
   .checkbox-#{$color} {
     input[type='checkbox']:checked + label {

@@ -49,3 +49,7 @@ input {
     outline: none;
   }
 }
+
+.form-control:focus {
+    border-color: rgba(86, 151, 137, 0.5);
+}

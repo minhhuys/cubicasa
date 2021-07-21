@@ -14,7 +14,12 @@ a {
 
 // Forms
 label {
-  font-weight: $font-weight-semibold;
+  font-weight: $font-weight-bold;
+
+  .label-hint {
+    color: #aaaaaa;
+    font-weight: 400;
+  }
 }
 
 // Buttons
