@@ -47,6 +47,15 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+.navtab-bg {
+    ul {
+        overflow-x: auto;
+        flex-wrap: nowrap;
 
+        li {
+            white-space: nowrap;
+        }
+    }
+}
 </style>
