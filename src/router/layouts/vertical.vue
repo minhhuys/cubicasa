@@ -1,12 +1,14 @@
 <script>
 import { layoutComputed } from '@state/helpers'
-import Topbar from '@components/topbar'
-import SideBar from '@components/side-bar'
+// import Topbar from '@components/topbar'
+// import SideBar from '@components/side-bar'
 import Rightsidebar from '@components/right-sidebar'
 import Footer from '@components/footer'
 
+import Header from "@components/header"
+
 export default {
-	components: { Topbar, SideBar, Rightsidebar, Footer },
+	components: {Rightsidebar, Footer, Header },
 	data() {
 		return {
 			isMenuCondensed: false,
@@ -41,19 +43,21 @@ export default {
 	},
 	methods: {
 		toggleMenu() {
-			document.body.classList.toggle('left-side-menu-condensed')
-			this.isMenuCondensed = !this.isMenuCondensed
-			if (
-				/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(
-					navigator.userAgent
-				)
-			) {
-				this.isMobileMenuOpened = !this.isMobileMenuOpened
-				document.body.classList.toggle('sidebar-enable')
-				if (window.screen.width <= 425) {
-					document.body.classList.remove('left-side-menu-condensed')
-				}
-			}
+			// document.body.classList.toggle('left-side-menu-condensed')
+			// this.isMenuCondensed = !this.isMenuCondensed
+			// if (
+			// 	/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(
+			// 		navigator.userAgent
+			// 	)
+			// ) {
+			// 	this.isMobileMenuOpened = !this.isMobileMenuOpened
+			// 	document.body.classList.toggle('sidebar-enable')
+			// 	if (window.screen.width <= 425) {
+			// 		document.body.classList.remove('left-side-menu-condensed')
+			// 	}
+			// }
+
+			this.$parent.toggleMenu()
 		},
 		toggleRightSidebar() {
 			document.body.classList.toggle('right-bar-enabled')
@@ -67,14 +71,16 @@ export default {
 
 <template>
 	<div id="wrapper">
-		<Topbar :user="user" :is-menu-opened="isMobileMenuOpened" />
-		<SideBar
+		<!-- <Topbar :user="user" :is-menu-opened="isMobileMenuOpened" /> -->
+
+		<Header />
+		<!-- <SideBar
 			:is-condensed="isMenuCondensed"
 			:theme="leftSidebarTheme"
 			:type="leftSidebarType"
 			:width="layoutWidth"
 			:user="user"
-		/>
+		/> -->
 		<!-- ============================================================== -->
 		<!-- Start Page Content here -->
 		<!-- ============================================================== -->

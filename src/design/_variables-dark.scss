@@ -11,6 +11,7 @@ $bg-leftbar-dark: #f5f5fb;
 // Leftbar width
 $leftbar-width: 250px;
 $leftbar-width-collapsed: 70px;
+$leftbar-width-left: 320px;
 
 // Small Leftbar Width
 $leftbar-width-sm: 160px;
@@ -49,6 +50,9 @@ $bg-gradient: linear-gradient(to bottom, #564ab1, #746dad);
 
 // Topbar Height
 $topbar-height: 72px;
+
+// Header Height
+$header-height: 40px;
 
 // Secondary font
 $font-family-secondary: 'Cerebri Sans,sans-serif';

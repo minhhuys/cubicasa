@@ -1,13 +1,13 @@
 <script>
 import VuePerfectScrollbar from 'vue-perfect-scrollbar'
 import { authComputed } from '@state/helpers'
-import Appmenu from './app-menu'
+// import Appmenu from './app-menu'
 
 /**
  * Left sidebar component - contains mainly the application menu
  */
 export default {
-	components: { VuePerfectScrollbar, Appmenu },
+	components: { VuePerfectScrollbar },
 	props: {
 		isCondensed: {
 			type: Boolean,
@@ -38,6 +38,7 @@ export default {
 	computed: {
 		...authComputed,
 	},
+
 	watch: {
 		theme: function(newVal, oldVal) {
 			if (newVal !== oldVal) {
@@ -83,13 +84,22 @@ export default {
 			}
 		},
 	},
+
+	methods: {
+		closeLeftSideMenu() {
+			this.$parent.toggleMenu()
+		}
+	},
 }
 </script>
 
 <template>
 	<!-- ========== Left Sidebar Start ========== -->
 	<div class="left-side-menu">
-		<div class="media user-profile mt-2 mb-2">
+		<div @click="closeLeftSideMenu">
+			close
+		</div>
+		<!-- <div class="media user-profile mt-2 mb-2">
 			<img
 				src="@assets/images/users/avatar-7.jpg"
 				class="avatar-sm rounded-circle mr-2"
@@ -168,8 +178,9 @@ export default {
 			<div v-else id="sidebar-menu">
 				<Appmenu />
 			</div>
-		</div>
+		</div> -->
 		<!-- Sidebar -left -->
+		<VuePerfectScrollbar />
 	</div>
 	<!-- Left Sidebar End -->
 </template>
@@ -187,5 +198,17 @@ export default {
 .ps > .ps__scrollbar-y-rail:active > .ps__scrollbar-y,
 .ps > .ps__scrollbar-y-rail:hover > .ps__scrollbar-y {
 	width: 6px !important;
+}
+
+.left-side-menu {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
 }
 </style>

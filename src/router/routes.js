@@ -115,22 +115,24 @@ const errorPagesRoutes = [
   },
 ]
 
+
+
 // dashboard
-const dashboardRoutes = [
-  {
-    path: '/',
-    name: 'Dashboard',
-    header: 'Navigation',
-    icon: 'home',
-    badge: {
-      text: '1',
-      varient: 'success',
-    },
-    component: () => lazyLoadView(import('@views/pages/dashboard/dashboard')),
-    meta: { authRequired: true },
-    props: (route) => ({ user: store.state.auth.currentUser || {} }),
-  },
-]
+// const dashboardRoutes = [
+//   {
+//     path: '/',
+//     name: 'Dashboard',
+//     header: 'Navigation',
+//     icon: 'home',
+//     badge: {
+//       text: '1',
+//       varient: 'success',
+//     },
+//     component: () => lazyLoadView(import('@views/pages/dashboard/dashboard')),
+//     meta: { authRequired: true },
+//     props: (route) => ({ user: store.state.auth.currentUser || {} }),
+//   },
+// ]
 
 // apps
 const calendarAppsRoutes = [
@@ -445,18 +447,39 @@ const chartsRoutes = [
 ]
 
 
+// CubiCasa Customer App
+
+const settings = [
+  {
+    path: '/',
+    name: 'CustomerSettings',
+    header: 'Navigation',
+    icon: 'home',
+    badge: {
+      text: '1',
+      varient: 'success',
+    },
+    component: () => lazyLoadView(import('@views/pages/profile/settings')),
+    meta: { authRequired: true },
+    props: (route) => ({ user: store.state.auth.currentUser || {} }),
+  },
+]
+
 const authProtectedRoutes = [
-  ...dashboardRoutes,
+  // ...dashboardRoutes,
   ...appsRoutes,
   ...pagesRoutes,
   ...uiRoutes,
   ...formsRoutes,
   ...chartsRoutes,
-  ...tablesRoutes
+  ...tablesRoutes,
+
+  ...settings
 ]
 const allRoutes = [...authRoutes, ...authProtectedRoutes, ...errorPagesRoutes]
 
 export { allRoutes, authProtectedRoutes }
+
 
 // Lazy-loads view components, but with better UX. A loading view
 // will be used if the component takes a while to load, falling

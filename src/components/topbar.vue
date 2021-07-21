@@ -182,40 +182,7 @@ export default {
 						</b-dropdown-text>
 
 						<!-- item-->
-						<b-dropdown-text
-							href="javascript:void(0);"
-							class="notify-item border-bottom"
-						>
-							<div class="notify-icon">
-								<img
-									src="@assets/images/users/avatar-1.jpg"
-									class="img-fluid rounded-circle"
-									alt
-								/>
-							</div>
-							<p class="notify-details">Karen Robinson</p>
-							<p class="text-muted mb-0 user-msg">
-								<small>Wow ! this admin looks good and awesome design</small>
-							</p>
-						</b-dropdown-text>
-
-						<!-- item-->
-						<b-dropdown-text
-							href="javascript:void(0);"
-							class="notify-item border-bottom"
-						>
-							<div class="notify-icon">
-								<img
-									src="@assets/images/users/avatar-2.jpg"
-									class="img-fluid rounded-circle"
-									alt
-								/>
-							</div>
-							<p class="notify-details">Cristina Pride</p>
-							<p class="text-muted mb-0 user-msg">
-								<small>Hi, How are you? What about our next meeting</small>
-							</p>
-						</b-dropdown-text>
+						
 
 						<!-- item-->
 						<b-dropdown-text

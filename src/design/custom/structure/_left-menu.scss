@@ -43,7 +43,7 @@
 // Sidemenu
 .left-side-menu {
   position: fixed;
-  top: $topbar-height;
+  top: $header-height;
   bottom: 0;
   z-index: 99;
   width: $leftbar-width;
@@ -254,7 +254,7 @@
   .left-side-menu {
     position: absolute;
     z-index: 5;
-    width: $leftbar-width-collapsed !important;
+    width: $leftbar-width-left !important;
 
     .slimScrollDiv,
     .slimscroll-menu {
@@ -448,7 +448,7 @@
 
 @media (max-width: 1024px) {
   .left-side-menu {
-    top: $topbar-height;
+    top: $header-height;
     padding: 12px 0;
   }
 
@@ -473,7 +473,7 @@
   }
 
   .left-side-menu {
-    top: $topbar-height;
+    top: $header-height;
     z-index: 10 !important;
     display: none;
   }
