@@ -2,26 +2,22 @@
 import { layoutComputed } from '@state/helpers'
 // import Topbar from '@components/topbar'
 // import SideBar from '@components/side-bar'
-import Rightsidebar from '@components/right-sidebar'
-import Footer from '@components/footer'
+// import Rightsidebar from '@components/right-sidebar'
+import LeftSidebar from '@components/left-sidebar'
 
+import Footer from '@components/footer'
 import Header from "@components/header"
 
 export default {
-	components: {Rightsidebar, Footer, Header },
+	components: {
+		Footer, 
+		Header, 
+		LeftSidebar,
+		// Rightsidebar
+	},
 	data() {
 		return {
-			isMenuCondensed: false,
-			isMobileMenuOpened: false,
-			user: this.$store ? this.$store.state.auth.currentUser : {} || {},
-			layout: this.$store ? this.$store.state.layout.layoutType : null || null,
-			theme: this.$store
-				? this.$store.state.layout.leftSidebarTheme
-				: null || null,
-			type: this.$store
-				? this.$store.state.layout.leftSidebarType
-				: null || null,
-			width: this.$store ? this.$store.state.layout.layoutWidth : null || null,
+			
 		}
 	},
 	computed: {
@@ -43,27 +39,10 @@ export default {
 	},
 	methods: {
 		toggleMenu() {
-			// document.body.classList.toggle('left-side-menu-condensed')
-			// this.isMenuCondensed = !this.isMenuCondensed
-			// if (
-			// 	/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(
-			// 		navigator.userAgent
-			// 	)
-			// ) {
-			// 	this.isMobileMenuOpened = !this.isMobileMenuOpened
-			// 	document.body.classList.toggle('sidebar-enable')
-			// 	if (window.screen.width <= 425) {
-			// 		document.body.classList.remove('left-side-menu-condensed')
-			// 	}
-			// }
-
-			this.$parent.toggleMenu()
+			document.body.classList.toggle('left-bar-enabled')
 		},
-		toggleRightSidebar() {
-			document.body.classList.toggle('right-bar-enabled')
-		},
-		hideRightSidebar() {
-			document.body.classList.remove('right-bar-enabled')
+		hideLeftSidebar() {
+			document.body.classList.remove('left-bar-enabled')
 		},
 	},
 }
@@ -71,20 +50,7 @@ export default {
 
 <template>
 	<div id="wrapper">
-		<!-- <Topbar :user="user" :is-menu-opened="isMobileMenuOpened" /> -->
-
 		<Header />
-		<!-- <SideBar
-			:is-condensed="isMenuCondensed"
-			:theme="leftSidebarTheme"
-			:type="leftSidebarType"
-			:width="layoutWidth"
-			:user="user"
-		/> -->
-		<!-- ============================================================== -->
-		<!-- Start Page Content here -->
-		<!-- ============================================================== -->
-
 		<div class="content-page">
 			<div class="content">
 				<!-- Start Content-->
@@ -94,6 +60,6 @@ export default {
 			</div>
 			<Footer />
 		</div>
-		<Rightsidebar />
+		<LeftSidebar />
 	</div>
 </template>

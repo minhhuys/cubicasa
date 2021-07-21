@@ -2,25 +2,25 @@
 // right-sidebar.scss
 //
 
-.right-bar {
+.left-bar {
   position: fixed;
   top: 0;
-  right: -($rightbar-width + 10px);
+  left: -($leftbar-width + 10px);
   bottom: 0;
   z-index: 9999;
   display: block;
-  float: right !important;
-  width: $rightbar-width;
+  float: left !important;
+  width: $leftbar-width;
   padding-bottom: 60px;
-  background-color: $bg-rightbar;
+  background-color: $bg-leftbar;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.06), 0 1px 0 0 rgba(0, 0, 0, 0.02);
-  // transition: all 200ms ease-out;
+  transition: all 200ms ease-out !important;
 
-  .rightbar-title {
+  .leftbar-title {
     // border-bottom: 2px solid $gray-300;
     padding: 25px 25px;
   }
-  .right-bar-toggle {
+  .left-bar-toggle {
     width: 24px;
     height: 24px;
     margin-top: -4px;
@@ -33,8 +33,8 @@
   }
 }
 
-// Rightbar overlay
-.rightbar-overlay {
+// Leftbar overlay
+.leftbar-overlay {
   position: absolute;
   top: 0;
   right: 0;
@@ -46,20 +46,38 @@
   transition: all 0.2s ease-out;
 }
 
-.right-bar-enabled {
-  .right-bar {
-    right: 0;
+.left-bar-enabled {
+  .left-bar {
+    left: 0;
   }
-  .rightbar-overlay {
+  .leftbar-overlay {
     display: block;
   }
 }
 
 @include media-breakpoint-down(sm) {
-  .right-bar {
+  .left-bar {
     overflow: auto;
     .slimscroll-menu {
       height: auto !important;
+
+      div {
+        border-bottom: 1px solid rgba(255,255,255,.08);
+
+        &.logo {
+            text-align: center;
+        }
+      }
+      a {
+            color: white;
+            font-size: 16px;
+
+            .feather {
+                float: right;
+            }
+        }
+
+      
     }
   }
 }

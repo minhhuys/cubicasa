@@ -1,0 +1,127 @@
+//
+// header.scss
+//
+
+header {
+    background-color: #163241;
+    height: $header-height;
+    justify-content: space-between;
+
+    .header-left,
+    .header-right {
+        align-items: center;
+        color: white;
+        font-size: 16px;
+        position: relative;
+
+        a {
+            color: #fff;
+        }
+
+        .header-item {
+            height: $header-height;
+
+            .dropdown-lg {
+                padding: 0;
+            }
+
+            &:hover {
+                background: rgba(255,255,255,.08);
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+                top: 0;
+                height: 100%;
+                width: 1px;
+                background: rgba(255,255,255,.08);
+            }
+        }
+    }
+
+    .header-left {
+        .header-item {
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 0 18px; 
+            color: white;
+
+            &::before {
+                right: 0;
+            }
+        }
+    }
+
+    .header-right {
+
+        a:hover {
+            color: white;
+        }
+
+        .header-item {
+            align-items: center;
+            cursor: pointer;
+
+            > a {
+                display: flex;
+                align-items: center;
+            }
+
+            &::before {
+                left: 0;
+            }   
+        }
+
+        .menu-item {
+            a {
+                color: rgba(0,0,0,.87);
+            }
+
+            .b-dropdown-text {
+                padding: 10px 18px;
+            }
+
+            &:hover {
+                background: rgba(0,0,0,.05);
+                color: rgba(0,0,0,.95);
+            }
+        }
+
+        
+    }
+
+    .mobile-mode  {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        .desktop-mode {
+            display: none !important;
+        }
+
+        .mobile-mode {
+            display: block;
+
+            .button-menu-mobile {
+                padding: 0 18px;
+                align-items: center;
+                height: $header-height;
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    top: 0;
+                    right: 0;
+                    height: 100%;
+                    width: 1px;
+                    background: rgba(255,255,255,.08);
+                }
+            }
+        }
+    }
+}

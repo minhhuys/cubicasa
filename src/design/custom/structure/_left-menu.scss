@@ -476,6 +476,23 @@
     top: $header-height;
     z-index: 10 !important;
     display: none;
+    background-color: #163241;
+    position: relative;
+
+    a {
+      display: block;
+      position: relative;
+      padding: 14px 18px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      color: white;
+      font-size: 16px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .left-menu-logo {
+      text-align: center;
+    }
   }
 
   .sidebar-enable {

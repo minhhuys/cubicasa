@@ -99,6 +99,18 @@ export default {
 		<div @click="closeLeftSideMenu">
 			close
 		</div>
+
+		<a href="/" class="left-menu-logo">
+			<img src="https://brand-assets-cc.s3.amazonaws.com/CUBICASA/cubicasa-logo-white.svg" alt="" width="160">
+		</a>
+		<a href="javascript;:" class="d-flex">
+			<p class="mb-0">List & Search</p> 
+			<feather type="list" class="icon-xs mr-1 align-middle"></feather>
+		</a>
+		<a href="javascript;:" class="d-flex">
+			<p class="mb-0">New Order</p>
+			<feather type="plus" class="icon-xs mr-1 align-middle"></feather>
+		</a>
 		<!-- <div class="media user-profile mt-2 mb-2">
 			<img
 				src="@assets/images/users/avatar-7.jpg"
@@ -201,14 +213,6 @@ export default {
 }
 
 .left-side-menu {
-	height: 100%;
-	width: 0;
-	position: fixed;
-	z-index: 1;
-	top: 0;
-	left: 0;
-	overflow-x: hidden;
-	transition: 0.5s;
-	padding-top: 60px;
+	
 }
 </style>
