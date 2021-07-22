@@ -24,7 +24,8 @@
     "test": "run-s test:unit test:e2e",
     "test:ci": "run-s test:unit:ci test:e2e",
     "new": "hygen new",
-    "docs": "vuepress dev"
+    "docs": "vuepress dev",
+    "docs:build": "vuepress build docs"
   },
   "dependencies": {
     "@fullcalendar/bootstrap": "^4.3.0",
@@ -54,6 +55,7 @@
     "vue-perfect-scrollbar": "^0.2.0",
     "vue-router": "3.0.6",
     "vue-scrollto": "^2.17.1",
+    "vue-swatches": "^2.1.1",
     "vue2-dropzone": "^3.6.0",
     "vue2-editor": "^2.10.2",
     "vuedraggable": "^2.23.2",
@@ -89,7 +91,7 @@
     "stylelint-config-recess-order": "2.0.x",
     "stylelint-config-standard": "18.3.x",
     "stylelint-scss": "3.6.x",
-    "vue-template-compiler": "2.6.10",
+    "vue-template-compiler": "2.6.11",
     "vuepress": "0.14.x"
   },
   "engines": {
