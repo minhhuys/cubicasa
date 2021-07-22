@@ -31,13 +31,23 @@ export const actions = {
   logIn({ commit, dispatch, getters }, { username, password } = {}) {
     if (getters.loggedIn) return dispatch('validate')
 
-    return axios
-      .post('/api/session', { username, password })
-      .then((response) => {
-        const user = response.data
-        commit('SET_CURRENT_USER', user)
-        return user
-      })
+    const user = {
+      email: "support@coderthemes.com",
+      id: 1,
+      name: "Nik Patel",
+      token: "valid-token-for-admin",
+      username: "admin"
+    }
+
+    commit('SET_CURRENT_USER', user)
+    
+    // return axios
+    //   .post('/api/session', { username, password })
+    //   .then((response) => {
+    //     const user = response.data
+    //     commit('SET_CURRENT_USER', user)
+    //     return user
+    //   })
   },
 
   // Logs out the current user.
