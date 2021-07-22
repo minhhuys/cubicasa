@@ -40,7 +40,7 @@ export const actions = {
     }
 
     commit('SET_CURRENT_USER', user)
-    
+
     // return axios
     //   .post('/api/session', { username, password })
     //   .then((response) => {
@@ -81,20 +81,31 @@ export const actions = {
   // with new data from the API.
   validate({ commit, state }) {
     if (!state.currentUser) return Promise.resolve(null)
+    
+    const user = {
+      email: 'support@coderthemes.com',
+      id: 1,
+      name: 'Nik Patel',
+      token: 'valid-token-for-admin',
+      username: 'admin',
+    }
 
-    return axios
-      .get('/api/session')
-      .then((response) => {
-        const user = response.data
-        commit('SET_CURRENT_USER', user)
-        return user
-      })
-      .catch((error) => {
-        if (error.response && error.response.status === 401) {
-          commit('SET_CURRENT_USER', null)
-        }
-        return null
-      })
+    return commit('SET_CURRENT_USER', user)
+
+
+    // return axios
+    //   .get('/api/session')
+    //   .then((response) => {
+    //     const user = response.data
+    //     commit('SET_CURRENT_USER', user)
+    //     return user
+    //   })
+    //   .catch((error) => {
+    //     if (error.response && error.response.status === 401) {
+    //       commit('SET_CURRENT_USER', null)
+    //     }
+    //     return null
+    //   })
   },
 }
 
