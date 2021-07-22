@@ -68,7 +68,7 @@
                 >
                     Allow collaborators to create orders without drafts
                 </label>
-                </div>
+            </div>
         </div>
 
         <div class="form-group">
@@ -102,8 +102,7 @@
 
         <div class="credit-card">
             <div class="card-icon" @click="toggleHidden">
-                <!-- <SvgIcon icon="eye-card" width="24"/> -->
-                <img class="card-icon" src="@assets/images/Eye.png" alt="">
+                <feather type="eye" class="icon-xs icon-dual"></feather>
             </div>
             <div class="card-logo-visa">
                 <img src="@assets/images/visa.png" width="30" alt="">
@@ -144,10 +143,10 @@
         <hr>
         <div class="d-flex justify-content-center mt-5">
             <div class="form-group text-left m-b-0 mr-2">
-                <button class="btn btn-light">Undo</button>
+                <button class="btn btn-light width-sm">Undo</button>
             </div>
             <div class="form-group text-left m-b-0" @click="handleSubmit">
-                <button class="btn btn-main" type="submit">Save settings</button>
+                <button class="btn btn-main width-lg" type="submit">Save settings</button>
             </div>
         </div>
 
@@ -156,7 +155,7 @@
         </h3>
         <hr>
         <div class="form-group text-center m-b-0" @click="handleSubmit">
-            <button class="btn btn-danger" type="submit">Delete</button>
+            <button class="btn btn-outline-danger width-xl" type="submit">Delete</button>
         </div>
     </div>
 </template>
@@ -246,6 +245,7 @@ export default {
         border-radius: 50%;
         display: flex;
         justify-content: center;
+        background: white;
     }
 
     .card-logo {

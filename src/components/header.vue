@@ -1,5 +1,5 @@
 <template>
-    <header class="d-flex">
+    <div class="header d-flex">
         <div class="header-left d-flex desktop-mode">
             <a href="/" class="header-item">
                 <img src="https://brand-assets-cc.s3.amazonaws.com/CUBICASA/cubicasa-logo-white.svg" alt="" width="100">
@@ -66,7 +66,7 @@
                 </b-dropdown-text>
             </b-nav-item-dropdown>
         </div>
-    </header>
+    </div>
 </template>
 
 <script>

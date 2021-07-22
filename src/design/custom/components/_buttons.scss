@@ -47,6 +47,10 @@
   font-size: 16px;
   font-weight: 700;
   border: none;
+
+  &:hover {
+    color: white;
+  }
 }
 //
 // Link buttons
@@ -74,6 +78,14 @@
     color: $btn-link-disabled-color;
     pointer-events: none;
   } // No need for an active state here
+}
+
+.btn-light {
+  background: none;
+
+  &:hover {
+    background: none;
+  }
 }
 
 //

@@ -10,7 +10,13 @@ a {
   &:focus {
     outline: none;
   }
+
+  &:visited {
+    cursor: pointer;
+    color: $cubi-main-color;
+  }
 }
+
 
 // Forms
 label {

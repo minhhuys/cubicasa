@@ -118,21 +118,21 @@ const errorPagesRoutes = [
 
 
 // dashboard
-// const dashboardRoutes = [
-//   {
-//     path: '/',
-//     name: 'Dashboard',
-//     header: 'Navigation',
-//     icon: 'home',
-//     badge: {
-//       text: '1',
-//       varient: 'success',
-//     },
-//     component: () => lazyLoadView(import('@views/pages/dashboard/dashboard')),
-//     meta: { authRequired: true },
-//     props: (route) => ({ user: store.state.auth.currentUser || {} }),
-//   },
-// ]
+const dashboardRoutes = [
+  {
+    path: '/dashboard',
+    name: 'Dashboard',
+    header: 'Navigation',
+    icon: 'home',
+    badge: {
+      text: '1',
+      varient: 'success',
+    },
+    component: () => lazyLoadView(import('@views/pages/dashboard/dashboard')),
+    meta: { authRequired: true },
+    props: (route) => ({ user: store.state.auth.currentUser || {} }),
+  },
+]
 
 // apps
 const calendarAppsRoutes = [
@@ -466,7 +466,7 @@ const settings = [
 ]
 
 const authProtectedRoutes = [
-  // ...dashboardRoutes,
+  ...dashboardRoutes,
   ...appsRoutes,
   ...pagesRoutes,
   ...uiRoutes,
