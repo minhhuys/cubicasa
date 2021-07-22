@@ -293,6 +293,7 @@
             centered
             title="Preview image"
             body-class="view-image-modal"
+            content-class="modal-custom-mobile"
 		>
 			<img :src="imgSrc" alt="">
 		</b-modal>

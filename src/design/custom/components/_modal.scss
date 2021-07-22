@@ -32,6 +32,19 @@
   .modal-demo {
     width: 96% !important;
   }
+
+  .modal-dialog {
+    margin: 0;
+    height: inherit
+  }
+
+  .modal-custom-mobile {
+    position: absolute;
+    bottom: 0;
+    border: none;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }
 
 .custom-modal-title {
